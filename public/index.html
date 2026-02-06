@@ -4,7 +4,23 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Gühring GmbH Spanntechnik – Magnetische Kraft für Ihre Industrie</title>
 <style>
-  @import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&display=swap');
+  /* Inter font - self-hosted for DSGVO compliance */
+  @font-face {
+    font-family: 'Inter';
+    font-style: normal;
+    font-weight: 300 900;
+    font-display: swap;
+    src: url('/fonts/inter-latin-ext.woff2') format('woff2');
+    unicode-range: U+0100-02BA, U+02BD-02C5, U+02C7-02CC, U+02CE-02D7, U+02DD-02FF, U+0304, U+0308, U+0329, U+1D00-1DBF, U+1E00-1E9F, U+1EF2-1EFF, U+2020, U+20A0-20AB, U+20AD-20C0, U+2113, U+2C60-2C7F, U+A720-A7FF;
+  }
+  @font-face {
+    font-family: 'Inter';
+    font-style: normal;
+    font-weight: 300 900;
+    font-display: swap;
+    src: url('/fonts/inter-latin.woff2') format('woff2');
+    unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+0304, U+0308, U+0329, U+2000-206F, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;
+  }
 
   * { margin: 0; padding: 0; box-sizing: border-box; }
 
@@ -879,6 +895,65 @@
     .modal-body { padding: 24px; }
     .modal-body h2 { font-size: 24px; }
     .modal-specs { grid-template-columns: 1fr; }
+    .cookie-banner { padding: 20px 24px; }
+    .cookie-banner-inner { flex-direction: column; gap: 16px; }
+    .cookie-banner-actions { width: 100%; }
+    .cookie-banner-actions button { width: 100%; }
+  }
+
+  /* ===== COOKIE CONSENT BANNER ===== */
+  .cookie-banner {
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    z-index: 9999;
+    background: var(--primary);
+    border-top: 2px solid var(--brand);
+    padding: 24px 48px;
+    box-shadow: 0 -4px 24px rgba(0,0,0,0.3);
+    transform: translateY(100%);
+    transition: transform 0.4s ease;
+  }
+  .cookie-banner.visible { transform: translateY(0); }
+  .cookie-banner-inner {
+    max-width: 1300px;
+    margin: 0 auto;
+    display: flex;
+    align-items: center;
+    gap: 32px;
+  }
+  .cookie-banner-text {
+    flex: 1;
+    color: rgba(255,255,255,0.75);
+    font-size: 14px;
+    line-height: 1.6;
+  }
+  .cookie-banner-text a {
+    color: var(--brand-light);
+    text-decoration: underline;
+  }
+  .cookie-banner-actions {
+    display: flex;
+    gap: 12px;
+    flex-shrink: 0;
+  }
+  .cookie-banner-actions button {
+    padding: 10px 24px;
+    border-radius: 8px;
+    font-size: 14px;
+    font-weight: 600;
+    cursor: pointer;
+    border: none;
+    transition: all 0.2s;
+    font-family: inherit;
+  }
+  .cookie-accept {
+    background: var(--brand);
+    color: white;
+  }
+  .cookie-accept:hover {
+    background: var(--brand-light);
   }
 </style>
 </head>
@@ -901,7 +976,7 @@
 <!-- ===== HERO ===== -->
 <section class="hero" id="home">
   <div class="hero-bg">
-    <img src="https://images.unsplash.com/photo-1597057435443-8a51eeb5538f?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&q=80&w=1920" alt="Industriehalle">
+    <img src="/images/hero-bg.jpg" alt="Industriehalle">
   </div>
   <div class="hero-content">
     <div>
@@ -987,14 +1062,14 @@
     </div>
     <div class="about-image-grid">
       <div class="about-img large">
-        <img src="https://images.unsplash.com/photo-1586333109867-812586269a58?crop=entropy&cs=tinysrgb&fit=crop&fm=jpg&q=80&w=600&h=800" alt="Industriearbeiter">
+        <img src="/images/about-worker.jpg" alt="Industriearbeiter">
         <div class="about-img-overlay">35+ Jahre Erfahrung</div>
       </div>
       <div class="about-img">
-        <img src="https://images.unsplash.com/photo-1590239481209-b99e795df500?crop=entropy&cs=tinysrgb&fit=crop&fm=jpg&q=80&w=600&h=400" alt="Präzisionsfertigung">
+        <img src="/images/about-precision.jpg" alt="Präzisionsfertigung">
       </div>
       <div class="about-img">
-        <img src="https://images.unsplash.com/photo-1562568068-7a90cf9e499d?crop=entropy&cs=tinysrgb&fit=crop&fm=jpg&q=80&w=600&h=400" alt="Metallfertigung">
+        <img src="/images/about-metal.jpg" alt="Metallfertigung">
       </div>
     </div>
   </div>
@@ -1002,7 +1077,7 @@
 
 <!-- ===== IMAGE BANNER ===== -->
 <div class="image-banner">
-  <img src="https://images.unsplash.com/photo-1550980217-9451a338c2b6?crop=entropy&cs=tinysrgb&fit=crop&fm=jpg&q=80&w=1920&h=500" alt="Präzisionsarbeit">
+  <img src="/images/banner-precision.jpg" alt="Präzisionsarbeit">
   <div class="image-banner-content">
     <div>
       <h2>Präzision trifft <span>Magnetkraft</span></h2>
@@ -1028,23 +1103,23 @@
 <!-- ===== GALLERY STRIP ===== -->
 <div class="gallery-strip">
   <div class="gallery-strip-item">
-    <img src="https://images.unsplash.com/photo-1583737097428-af53774819a2?crop=entropy&cs=tinysrgb&fit=crop&fm=jpg&q=80&w=600&h=400" alt="Stahlproduktion">
+    <img src="/images/gallery-steel.jpg" alt="Stahlproduktion">
   </div>
   <div class="gallery-strip-item">
-    <img src="https://images.unsplash.com/photo-1562003094-37c71004fa9b?crop=entropy&cs=tinysrgb&fit=crop&fm=jpg&q=80&w=600&h=400" alt="Industrieanlage">
+    <img src="/images/gallery-industrial.jpg" alt="Industrieanlage">
   </div>
   <div class="gallery-strip-item">
-    <img src="https://images.unsplash.com/photo-1619070284836-e850273d69ac?crop=entropy&cs=tinysrgb&fit=crop&fm=jpg&q=80&w=600&h=400" alt="Logistik">
+    <img src="/images/gallery-logistics.jpg" alt="Logistik">
   </div>
   <div class="gallery-strip-item">
-    <img src="https://images.unsplash.com/photo-1584549239925-5554aa6b9183?crop=entropy&cs=tinysrgb&fit=crop&fm=jpg&q=80&w=600&h=400" alt="Fertigung">
+    <img src="/images/gallery-manufacturing.jpg" alt="Fertigung">
   </div>
 </div>
 
 <!-- ===== CTA ===== -->
 <div class="cta-section">
   <div class="cta-bg">
-    <img src="https://images.unsplash.com/photo-1631856956423-2b95dae0ba74?crop=entropy&cs=tinysrgb&fit=crop&fm=jpg&q=80&w=1920&h=600" alt="Industriehintergrund">
+    <img src="/images/cta-bg.jpg" alt="Industriehintergrund">
   </div>
   <div class="cta-inner">
     <h2>Bereit für magnetische<br>Lösungen?</h2>
@@ -1123,9 +1198,8 @@
     <div class="footer-col">
       <h4>Rechtliches</h4>
       <ul>
-        <li><a href="#">Impressum</a></li>
-        <li><a href="#">Datenschutz</a></li>
-        <li><a href="#">AGB</a></li>
+        <li><a href="/impressum.html">Impressum</a></li>
+        <li><a href="/datenschutz.html">Datenschutz</a></li>
       </ul>
     </div>
   </div>
@@ -1245,6 +1319,32 @@
 
   // Load on page ready
   loadProducts();
+</script>
+
+<!-- ===== COOKIE CONSENT BANNER ===== -->
+<div class="cookie-banner" id="cookie-banner">
+  <div class="cookie-banner-inner">
+    <div class="cookie-banner-text">
+      Diese Website verwendet ausschließlich technisch notwendige Cookies, die für den Betrieb der Seite erforderlich sind.
+      Weitere Informationen finden Sie in unserer <a href="/datenschutz.html">Datenschutzerklärung</a>.
+    </div>
+    <div class="cookie-banner-actions">
+      <button class="cookie-accept" onclick="acceptCookies()">Verstanden</button>
+    </div>
+  </div>
+</div>
+<script>
+  (function() {
+    if (!localStorage.getItem('cookie-consent')) {
+      setTimeout(function() {
+        document.getElementById('cookie-banner').classList.add('visible');
+      }, 500);
+    }
+  })();
+  function acceptCookies() {
+    localStorage.setItem('cookie-consent', 'accepted');
+    document.getElementById('cookie-banner').classList.remove('visible');
+  }
 </script>
 
 </body>
