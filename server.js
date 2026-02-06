@@ -7,6 +7,7 @@ const path = require('path');
 const app = express();
 const PORT = 3000;
 const DATA_FILE = path.join(__dirname, 'data', 'products.json');
+const BLOG_FILE = path.join(__dirname, 'data', 'blog.json');
 const UPLOADS_DIR = path.join(__dirname, 'uploads');
 
 // Ensure uploads directory exists
@@ -68,6 +69,11 @@ function writeProducts(products) {
   fs.writeFileSync(DATA_FILE, JSON.stringify(products, null, 2), 'utf-8');
 }
 
+function readBlog() {
+  const data = fs.readFileSync(BLOG_FILE, 'utf-8');
+  return JSON.parse(data);
+}
+
 // --- API Routes ---
 
 // GET all products (public)
@@ -77,6 +83,16 @@ app.get('/api/products', (req, res) => {
     res.json(products);
   } catch (err) {
     res.status(500).json({ error: 'Fehler beim Laden der Produkte' });
+  }
+});
+
+// GET all blog articles (public)
+app.get('/api/blog', (req, res) => {
+  try {
+    const articles = readBlog();
+    res.json(articles);
+  } catch (err) {
+    res.status(500).json({ error: 'Fehler beim Laden der Blog-Artikel' });
   }
 });
 
