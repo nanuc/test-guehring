@@ -1,0 +1,17 @@
+{
+  "permissions": {
+    "allow": [
+      "WebFetch(domain:guehring-gmbh.de)",
+      "mcp__ray-app__get_ray_theme",
+      "mcp__ray-app__get_ray_windows",
+      "WebSearch",
+      "WebFetch(domain:www.wlw.de)",
+      "mcp__ray-app__send_custom_html_output",
+      "Bash(open:*)",
+      "Bash(curl:*)",
+      "WebFetch(domain:unsplash.com)",
+      "Bash(npm install:*)",
+      "Bash(node:*)"
+    ]
+  }
+}

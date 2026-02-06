@@ -1,0 +1,158 @@
+[
+  {
+    "id": "maxx",
+    "name": "Lasthebemagnet MaxX",
+    "tag": "Bestseller",
+    "description": "Leistungsstarker Lasthebemagnet für den sicheren Transport schwerer Lasten bis 250 kg und mehr.",
+    "detailDescription": "Der Lasthebemagnet MaxX ist unser meistverkauftes Produkt und bewährt sich seit Jahrzehnten im täglichen Einsatz. Mit seiner kompakten Bauweise und der enormen Haftkraft eignet er sich ideal für den Transport von Blechen, Rundmaterial und anderen ferromagnetischen Werkstücken. Die Bedienung erfolgt einfach und sicher über einen Handhebel – ohne externe Energieversorgung.",
+    "image": "https://guehring-gmbh.de/wp-content/uploads/2025/12/guh-4.jpg",
+    "specs": [
+      {
+        "label": "Tragkraft",
+        "value": "bis 2300 kg"
+      },
+      {
+        "label": "Bauart",
+        "value": "Permanentmagnet"
+      },
+      {
+        "label": "Bedienung",
+        "value": "Handhebel"
+      },
+      {
+        "label": "Einsatzbereich",
+        "value": "Flach- & Rundmaterial"
+      }
+    ]
+  },
+  {
+    "id": "maxxtg",
+    "name": "Lasthebemagnet MaxX TG",
+    "tag": "Neu",
+    "description": "Die TG-Variante für besonders anspruchsvolle Hebeanwendungen mit erhöhter Tragkraft.",
+    "detailDescription": "Der MaxX TG erweitert die bewährte MaxX-Serie um eine Variante für besonders schwere Lasten. Die TG-Ausführung bietet erhöhte Tragkraft bei gleichbleibend kompakter Bauform und ist speziell für den Einsatz in Produktionsumgebungen mit hohen Anforderungen an Sicherheit und Effizienz konzipiert. Robuste Verarbeitung und langlebige Permanentmagnete garantieren zuverlässigen Dauerbetrieb.",
+    "image": "https://guehring-gmbh.de/wp-content/uploads/2025/12/guh-2.jpg",
+    "specs": [
+      {
+        "label": "Tragkraft",
+        "value": "bis 500 kg"
+      },
+      {
+        "label": "Bauart",
+        "value": "Permanentmagnet"
+      },
+      {
+        "label": "Sicherheitsfaktor",
+        "value": "3:1"
+      },
+      {
+        "label": "Einsatzbereich",
+        "value": "Schwerlast-Transport"
+      }
+    ]
+  },
+  {
+    "id": "spannplatte",
+    "name": "Magnetspannplatten",
+    "tag": "Spanntechnik",
+    "description": "Präzise Magnetspannplatten für die sichere Werkstückfixierung beim Fräsen, Schleifen und Erodieren.",
+    "detailDescription": "Unsere Magnetspannplatten ermöglichen eine flächendeckende, gleichmäßige Werkstückspannung ohne mechanische Spannmittel. Das Ergebnis: verzugsfreies Bearbeiten und deutlich verkürzte Rüstzeiten. Die Platten eignen sich hervorragend für Fräs-, Schleif- und Erodierarbeiten und sind in verschiedenen Größen und Polausführungen verfügbar.",
+    "image": "https://guehring-gmbh.de/wp-content/uploads/2025/12/guh-1-2.jpg",
+    "specs": [
+      {
+        "label": "Spannfläche",
+        "value": "individuell konfigurierbar"
+      },
+      {
+        "label": "Polausführung",
+        "value": "Quadratpol / Radialpol"
+      },
+      {
+        "label": "Anwendung",
+        "value": "Fräsen, Schleifen, Erodieren"
+      },
+      {
+        "label": "Aktivierung",
+        "value": "Elektropermanent"
+      }
+    ]
+  },
+  {
+    "id": "parallel",
+    "name": "Parallelpolplatten",
+    "tag": "Schleifen",
+    "description": "Parallelpolplatten zum Schleifen – optimale Spannkraft für Flach- und Profilschleifmaschinen.",
+    "detailDescription": "Parallelpolplatten sind speziell für den Einsatz auf Flach- und Profilschleifmaschinen konstruiert. Durch die parallele Polanordnung wird eine besonders gleichmäßige Haftkraftverteilung erzielt, die sich optimal für dünne und flache Werkstücke eignet. Die Platten ermöglichen höchste Oberflächengüten bei minimaler Werkstückverformung.",
+    "image": "https://guehring-gmbh.de/wp-content/uploads/2025/12/guh-3-1.jpg",
+    "specs": [
+      {
+        "label": "Polausführung",
+        "value": "Parallelpol fein"
+      },
+      {
+        "label": "Bauart",
+        "value": "Permanent / Elektropermanent"
+      },
+      {
+        "label": "Anwendung",
+        "value": "Flach- & Profilschleifen"
+      },
+      {
+        "label": "Vorteil",
+        "value": "Minimale Verformung"
+      }
+    ]
+  },
+  {
+    "id": "schraubstock",
+    "name": "Maschinenschraubstöcke",
+    "tag": "Spanntechnik",
+    "description": "Robuste und hochpräzise Maschinenschraubstöcke für maximale Spannkraft und Wiederholgenauigkeit.",
+    "detailDescription": "Unsere Maschinenschraubstöcke überzeugen durch höchste Präzision und enorme Spannkräfte. Sie eignen sich für den Einsatz auf CNC-Fräsmaschinen, Bearbeitungszentren und konventionellen Werkzeugmaschinen. Dank gehärteter und geschliffener Funktionsflächen wird eine ausgezeichnete Wiederholgenauigkeit bei jedem Spannvorgang gewährleistet.",
+    "image": "https://images.unsplash.com/photo-1590239683804-b9f5725fe77c?crop=entropy&cs=tinysrgb&fit=crop&fm=jpg&q=80&w=600&h=400",
+    "specs": [
+      {
+        "label": "Spannkraft",
+        "value": "bis 40 kN"
+      },
+      {
+        "label": "Genauigkeit",
+        "value": "< 0,01 mm"
+      },
+      {
+        "label": "Anwendung",
+        "value": "CNC-Fräsen, Bearbeitungszentren"
+      },
+      {
+        "label": "Material",
+        "value": "Gehärteter Stahl"
+      }
+    ]
+  },
+  {
+    "id": "anschlag",
+    "name": "Anschlagmittel",
+    "tag": "Hebetechnik",
+    "description": "Geprüfte und zertifizierte Anschlagmittel für den professionellen Einsatz im Hebe- und Transportbereich.",
+    "detailDescription": "Unser Sortiment an Anschlagmitteln umfasst Ketten, Seile, Hebebänder und Sonderlösungen für den professionellen Hebe- und Transportbetrieb. Alle Produkte sind nach den gültigen Normen geprüft und zertifiziert. Wir beraten Sie gerne bei der Auswahl der richtigen Anschlagmittel für Ihre spezifischen Anforderungen.",
+    "image": "https://images.unsplash.com/photo-1601119462238-d7f347e41844?crop=entropy&cs=tinysrgb&fit=crop&fm=jpg&q=80&w=600&h=400",
+    "specs": [
+      {
+        "label": "Produktgruppen",
+        "value": "Ketten, Seile, Bänder"
+      },
+      {
+        "label": "Zertifizierung",
+        "value": "DIN / EN geprüft"
+      },
+      {
+        "label": "Tragfähigkeit",
+        "value": "nach Bedarf"
+      },
+      {
+        "label": "Service",
+        "value": "Prüfung & Wartung"
+      }
+    ]
+  }
+]

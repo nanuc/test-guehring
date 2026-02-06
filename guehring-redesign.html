@@ -1,0 +1,1484 @@
+<html>
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Gühring GmbH Spanntechnik – Magnetische Kraft für Ihre Industrie</title>
+<style>
+  @import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&display=swap');
+
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+
+  :root {
+    --brand: #00a088;
+    --brand-dark: #008a75;
+    --brand-darker: #006e5d;
+    --brand-light: #00b89a;
+    --brand-soft: rgba(0, 160, 136, 0.08);
+    --brand-soft2: rgba(0, 160, 136, 0.15);
+    --primary: #1a2a2e;
+    --primary-light: #243a3f;
+    --text: #1a1a2e;
+    --text-secondary: #5a6478;
+    --text-light: #8892a4;
+    --bg: #ffffff;
+    --bg-warm: #f8faf9;
+    --bg-section: #f2f6f5;
+    --border: #e0e8e6;
+    --white: #ffffff;
+    --gray-dots: #999999;
+  }
+
+  html { scroll-behavior: smooth; }
+
+  body {
+    font-family: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
+    color: var(--text);
+    background: var(--bg);
+    line-height: 1.6;
+    -webkit-font-smoothing: antialiased;
+  }
+
+  /* ===== NAVIGATION ===== */
+  nav {
+    position: fixed;
+    top: 0; left: 0; right: 0;
+    z-index: 100;
+    background: rgba(26, 42, 46, 0.97);
+    backdrop-filter: blur(20px);
+    padding: 0 48px;
+    height: 76px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    border-bottom: 1px solid rgba(0, 160, 136, 0.15);
+  }
+
+  .nav-logo img {
+    height: 38px;
+    width: auto;
+  }
+
+  .nav-links {
+    display: flex;
+    gap: 36px;
+    list-style: none;
+    align-items: center;
+  }
+
+  .nav-links a {
+    color: rgba(255,255,255,0.7);
+    text-decoration: none;
+    font-size: 14px;
+    font-weight: 500;
+    letter-spacing: 0.5px;
+    text-transform: uppercase;
+    transition: color 0.2s;
+  }
+
+  .nav-links a:hover { color: var(--brand-light); }
+
+  .nav-cta {
+    background: var(--brand) !important;
+    color: white !important;
+    padding: 10px 24px !important;
+    border-radius: 8px;
+    font-weight: 600 !important;
+    letter-spacing: 0 !important;
+    text-transform: none !important;
+    transition: background 0.2s, transform 0.2s !important;
+  }
+
+  .nav-cta:hover {
+    background: var(--brand-light) !important;
+    transform: translateY(-1px);
+  }
+
+  /* ===== HERO ===== */
+  .hero {
+    min-height: 100vh;
+    position: relative;
+    display: flex;
+    align-items: center;
+    padding: 76px 0 0 0;
+    overflow: hidden;
+  }
+
+  .hero-bg {
+    position: absolute;
+    inset: 0;
+    z-index: 0;
+  }
+
+  .hero-bg img {
+    width: 100%; height: 100%;
+    object-fit: cover;
+  }
+
+  .hero-bg::after {
+    content: '';
+    position: absolute;
+    inset: 0;
+    background: linear-gradient(135deg, rgba(26,42,46,0.92) 0%, rgba(26,42,46,0.75) 50%, rgba(0,160,136,0.2) 100%);
+  }
+
+  .hero-content {
+    position: relative;
+    z-index: 2;
+    max-width: 1300px;
+    margin: 0 auto;
+    padding: 80px 60px;
+    display: grid;
+    grid-template-columns: 1.1fr 0.9fr;
+    gap: 60px;
+    align-items: center;
+    width: 100%;
+  }
+
+  .hero-badge {
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    background: rgba(0, 160, 136, 0.2);
+    border: 1px solid rgba(0, 160, 136, 0.4);
+    color: var(--brand-light);
+    padding: 8px 18px;
+    border-radius: 50px;
+    font-size: 13px;
+    font-weight: 600;
+    letter-spacing: 0.5px;
+    text-transform: uppercase;
+    margin-bottom: 28px;
+  }
+
+  .hero-badge::before {
+    content: '';
+    width: 8px; height: 8px;
+    background: var(--brand-light);
+    border-radius: 50%;
+    animation: pulse 2s infinite;
+  }
+
+  @keyframes pulse {
+    0%, 100% { opacity: 1; }
+    50% { opacity: 0.4; }
+  }
+
+  .hero h1 {
+    font-size: 54px;
+    font-weight: 800;
+    line-height: 1.1;
+    color: var(--white);
+    letter-spacing: -2px;
+    margin-bottom: 24px;
+  }
+
+  .hero h1 span {
+    color: var(--brand-light);
+  }
+
+  .hero-text {
+    font-size: 18px;
+    color: rgba(255,255,255,0.65);
+    line-height: 1.7;
+    margin-bottom: 40px;
+    max-width: 520px;
+  }
+
+  .hero-buttons { display: flex; gap: 16px; flex-wrap: wrap; }
+
+  .btn-primary {
+    display: inline-flex; align-items: center; gap: 10px;
+    background: var(--brand);
+    color: white; padding: 16px 32px; border-radius: 12px;
+    font-size: 16px; font-weight: 600; text-decoration: none;
+    transition: all 0.3s;
+    box-shadow: 0 4px 24px rgba(0,160,136,0.3);
+  }
+  .btn-primary:hover {
+    background: var(--brand-light);
+    transform: translateY(-2px);
+    box-shadow: 0 8px 32px rgba(0,160,136,0.4);
+  }
+
+  .btn-secondary {
+    display: inline-flex; align-items: center; gap: 10px;
+    background: rgba(255,255,255,0.08);
+    color: white; padding: 16px 32px; border-radius: 12px;
+    font-size: 16px; font-weight: 600; text-decoration: none;
+    border: 1px solid rgba(255,255,255,0.2);
+    transition: all 0.3s;
+  }
+  .btn-secondary:hover {
+    background: rgba(255,255,255,0.14);
+    border-color: rgba(255,255,255,0.35);
+    transform: translateY(-2px);
+  }
+
+  /* Hero product showcase */
+  .hero-showcase {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 16px;
+  }
+
+  .hero-product {
+    background: rgba(255,255,255,0.07);
+    border: 1px solid rgba(255,255,255,0.1);
+    border-radius: 16px;
+    overflow: hidden;
+    transition: all 0.3s;
+    backdrop-filter: blur(10px);
+  }
+
+  .hero-product:hover {
+    transform: translateY(-4px);
+    border-color: rgba(0,160,136,0.4);
+    box-shadow: 0 12px 40px rgba(0,0,0,0.3);
+  }
+
+  .hero-product img {
+    width: 100%;
+    height: 140px;
+    object-fit: cover;
+  }
+
+  .hero-product-label {
+    padding: 12px 16px;
+    font-size: 13px;
+    font-weight: 600;
+    color: rgba(255,255,255,0.85);
+    letter-spacing: 0.3px;
+  }
+
+  /* ===== TRUST BAR ===== */
+  .trust-bar {
+    background: var(--primary);
+    padding: 32px 60px;
+    border-bottom: 2px solid var(--brand);
+  }
+
+  .trust-inner {
+    max-width: 1300px;
+    margin: 0 auto;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 32px;
+  }
+
+  .trust-items { display: flex; gap: 48px; align-items: center; flex-wrap: wrap; }
+
+  .trust-item {
+    display: flex; align-items: center; gap: 12px;
+    color: rgba(255,255,255,0.8); font-size: 14px; font-weight: 500;
+  }
+
+  .trust-icon {
+    width: 36px; height: 36px;
+    background: rgba(0,160,136,0.2);
+    border: 1px solid rgba(0,160,136,0.3);
+    border-radius: 8px;
+    display: flex; align-items: center; justify-content: center;
+    font-size: 16px; color: var(--brand-light);
+  }
+
+  /* ===== SECTIONS ===== */
+  .section-wrap {
+    padding: 100px 60px;
+    max-width: 1420px;
+    margin: 0 auto;
+  }
+
+  .section-label {
+    display: inline-flex; align-items: center; gap: 10px;
+    color: var(--brand);
+    font-size: 13px; font-weight: 700;
+    letter-spacing: 2px; text-transform: uppercase;
+    margin-bottom: 16px;
+  }
+  .section-label::before {
+    content: '';
+    width: 28px; height: 2px;
+    background: var(--brand);
+    border-radius: 1px;
+  }
+
+  .section-title {
+    font-size: 44px; font-weight: 800;
+    letter-spacing: -1.5px; color: var(--text);
+    line-height: 1.15; margin-bottom: 16px;
+  }
+
+  .section-subtitle {
+    font-size: 18px;
+    color: var(--text-secondary);
+    line-height: 1.7;
+    max-width: 600px;
+  }
+
+  /* ===== ABOUT ===== */
+  .about-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 60px;
+    align-items: center;
+    margin-top: 60px;
+  }
+
+  .about-features {
+    display: flex; flex-direction: column; gap: 24px; margin-top: 32px;
+  }
+
+  .about-feature {
+    display: flex; gap: 16px; align-items: flex-start;
+  }
+
+  .about-feature-icon {
+    width: 48px; height: 48px; min-width: 48px;
+    background: var(--brand-soft);
+    border: 1px solid rgba(0,160,136,0.15);
+    border-radius: 12px;
+    display: flex; align-items: center; justify-content: center;
+    font-size: 20px;
+  }
+
+  .about-feature h4 {
+    font-size: 16px; font-weight: 700;
+    margin-bottom: 4px; color: var(--text);
+  }
+  .about-feature p {
+    font-size: 14px; color: var(--text-secondary); line-height: 1.6;
+  }
+
+  .about-image-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 1fr 1fr;
+    gap: 12px;
+    height: 460px;
+  }
+
+  .about-img {
+    border-radius: 16px;
+    overflow: hidden;
+    position: relative;
+  }
+
+  .about-img img {
+    width: 100%; height: 100%;
+    object-fit: cover;
+    transition: transform 0.4s;
+  }
+
+  .about-img:hover img { transform: scale(1.05); }
+
+  .about-img.large {
+    grid-row: 1 / 3;
+  }
+
+  .about-img-overlay {
+    position: absolute;
+    bottom: 0; left: 0; right: 0;
+    background: linear-gradient(transparent, rgba(26,42,46,0.85));
+    padding: 16px;
+    color: white;
+    font-size: 14px;
+    font-weight: 600;
+  }
+
+  /* ===== IMAGE BANNER ===== */
+  .image-banner {
+    position: relative;
+    height: 400px;
+    overflow: hidden;
+  }
+
+  .image-banner img {
+    width: 100%; height: 100%;
+    object-fit: cover;
+  }
+
+  .image-banner::after {
+    content: '';
+    position: absolute; inset: 0;
+    background: linear-gradient(135deg, rgba(26,42,46,0.8), rgba(0,160,136,0.3));
+  }
+
+  .image-banner-content {
+    position: absolute; inset: 0;
+    z-index: 2;
+    display: flex; align-items: center; justify-content: center;
+    text-align: center;
+  }
+
+  .image-banner-content h2 {
+    font-size: 48px; font-weight: 800; color: white;
+    letter-spacing: -1.5px; line-height: 1.15;
+  }
+
+  .image-banner-content h2 span { color: var(--brand-light); }
+
+  .image-banner-content p {
+    color: rgba(255,255,255,0.7);
+    font-size: 18px; margin-top: 12px;
+    max-width: 500px; margin-left: auto; margin-right: auto;
+  }
+
+  /* ===== PRODUCTS ===== */
+  .products {
+    background: var(--bg-section);
+    padding: 100px 60px;
+  }
+
+  .products-inner { max-width: 1300px; margin: 0 auto; }
+
+  .products-header { margin-bottom: 60px; }
+
+  .products-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 24px;
+  }
+
+  .product-card {
+    background: var(--white);
+    border-radius: 20px;
+    overflow: hidden;
+    border: 1px solid var(--border);
+    transition: all 0.3s;
+    position: relative;
+  }
+
+  .product-card:hover {
+    transform: translateY(-6px);
+    box-shadow: 0 16px 48px rgba(0,160,136,0.12);
+    border-color: transparent;
+  }
+
+  .product-card::after {
+    content: '';
+    position: absolute;
+    top: 0; left: 0; right: 0; height: 3px;
+    background: linear-gradient(90deg, var(--brand), var(--brand-light));
+    opacity: 0; transition: opacity 0.3s;
+  }
+  .product-card:hover::after { opacity: 1; }
+
+  .product-card-image {
+    height: 200px;
+    overflow: hidden;
+    background: var(--bg-section);
+  }
+
+  .product-card-image img {
+    width: 100%; height: 100%;
+    object-fit: cover;
+    transition: transform 0.4s;
+  }
+
+  .product-card:hover .product-card-image img { transform: scale(1.06); }
+
+  .product-card-body { padding: 28px; }
+
+  .product-tag {
+    display: inline-block;
+    background: var(--brand-soft);
+    color: var(--brand-dark);
+    font-size: 12px; font-weight: 600;
+    letter-spacing: 0.5px;
+    padding: 4px 12px;
+    border-radius: 50px;
+    margin-bottom: 12px;
+  }
+
+  .product-card h3 {
+    font-size: 20px; font-weight: 700;
+    margin-bottom: 10px; color: var(--text);
+    letter-spacing: -0.3px;
+  }
+  .product-card p {
+    font-size: 14px; color: var(--text-secondary);
+    line-height: 1.7; margin-bottom: 20px;
+  }
+
+  .product-link {
+    display: inline-flex; align-items: center; gap: 8px;
+    color: var(--brand); font-weight: 600; font-size: 14px;
+    text-decoration: none; transition: gap 0.2s;
+  }
+  .product-link:hover { gap: 12px; }
+  .product-link::after { content: '\2192'; font-size: 16px; }
+
+  /* ===== GALLERY STRIP ===== */
+  .gallery-strip {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 0;
+    overflow: hidden;
+  }
+
+  .gallery-strip-item {
+    height: 280px;
+    overflow: hidden;
+    position: relative;
+  }
+
+  .gallery-strip-item img {
+    width: 100%; height: 100%;
+    object-fit: cover;
+    transition: transform 0.5s;
+  }
+
+  .gallery-strip-item:hover img { transform: scale(1.08); }
+
+  .gallery-strip-item::after {
+    content: '';
+    position: absolute; inset: 0;
+    background: linear-gradient(transparent 60%, rgba(26,42,46,0.6));
+    opacity: 0;
+    transition: opacity 0.3s;
+  }
+
+  .gallery-strip-item:hover::after { opacity: 1; }
+
+  /* ===== CTA ===== */
+  .cta-section {
+    position: relative;
+    padding: 120px 60px;
+    overflow: hidden;
+  }
+
+  .cta-bg {
+    position: absolute; inset: 0;
+  }
+
+  .cta-bg img {
+    width: 100%; height: 100%;
+    object-fit: cover;
+  }
+
+  .cta-bg::after {
+    content: '';
+    position: absolute; inset: 0;
+    background: linear-gradient(145deg, rgba(26,42,46,0.93), rgba(0,100,80,0.85));
+  }
+
+  .cta-inner {
+    max-width: 800px;
+    margin: 0 auto;
+    text-align: center;
+    position: relative;
+    z-index: 2;
+  }
+
+  .cta-inner h2 {
+    font-size: 44px; font-weight: 800; color: var(--white);
+    letter-spacing: -1.5px; margin-bottom: 20px; line-height: 1.15;
+  }
+
+  .cta-inner p {
+    font-size: 18px; color: rgba(255,255,255,0.65);
+    line-height: 1.7; margin-bottom: 40px;
+    max-width: 550px; margin-left: auto; margin-right: auto;
+  }
+
+  .cta-buttons { display: flex; gap: 16px; justify-content: center; flex-wrap: wrap; }
+
+  /* ===== CONTACT ===== */
+  .contact-bar {
+    background: var(--bg-warm);
+    padding: 60px;
+    border-top: 1px solid var(--border);
+  }
+
+  .contact-bar-inner {
+    max-width: 1300px; margin: 0 auto;
+    display: grid; grid-template-columns: repeat(4, 1fr); gap: 40px;
+  }
+
+  .contact-item { display: flex; gap: 16px; align-items: flex-start; }
+
+  .contact-icon {
+    width: 48px; height: 48px; min-width: 48px;
+    background: var(--brand-soft);
+    border: 1px solid rgba(0,160,136,0.15);
+    border-radius: 12px;
+    display: flex; align-items: center; justify-content: center;
+    font-size: 20px;
+  }
+
+  .contact-item h4 { font-size: 14px; font-weight: 700; color: var(--text); margin-bottom: 4px; }
+  .contact-item p { font-size: 14px; color: var(--text-secondary); line-height: 1.5; }
+
+  /* ===== FOOTER ===== */
+  footer {
+    background: var(--primary);
+    color: white;
+    padding: 60px;
+  }
+
+  .footer-inner {
+    max-width: 1300px; margin: 0 auto;
+    display: grid; grid-template-columns: 2fr 1fr 1fr 1fr; gap: 60px;
+  }
+
+  .footer-logo img { height: 32px; margin-bottom: 16px; }
+
+  .footer-brand p {
+    color: rgba(255,255,255,0.5);
+    font-size: 14px; line-height: 1.7;
+    max-width: 300px;
+  }
+
+  .footer-col h4 {
+    font-size: 13px; font-weight: 700;
+    text-transform: uppercase; letter-spacing: 1.5px;
+    color: var(--brand); margin-bottom: 20px;
+  }
+
+  .footer-col ul { list-style: none; display: flex; flex-direction: column; gap: 12px; }
+
+  .footer-col a {
+    color: rgba(255,255,255,0.6);
+    text-decoration: none; font-size: 14px;
+    transition: color 0.2s;
+  }
+  .footer-col a:hover { color: var(--brand-light); }
+
+  .footer-bottom {
+    max-width: 1300px; margin: 40px auto 0;
+    padding-top: 30px;
+    border-top: 1px solid rgba(255,255,255,0.08);
+    display: flex; justify-content: space-between; align-items: center;
+  }
+
+  .footer-bottom p { color: rgba(255,255,255,0.35); font-size: 13px; }
+
+  .footer-social { display: flex; gap: 12px; }
+
+  .footer-social a {
+    width: 36px; height: 36px;
+    background: rgba(0,160,136,0.15);
+    border-radius: 10px;
+    display: flex; align-items: center; justify-content: center;
+    color: var(--brand-light);
+    text-decoration: none; font-size: 14px;
+    transition: all 0.2s;
+    border: 1px solid rgba(0,160,136,0.2);
+  }
+
+  .footer-social a:hover {
+    background: var(--brand);
+    color: white;
+    border-color: var(--brand);
+  }
+
+  /* ===== MODALS ===== */
+  .modal-overlay {
+    display: none;
+    position: fixed;
+    inset: 0;
+    z-index: 1000;
+    background: rgba(26,42,46,0.7);
+    backdrop-filter: blur(6px);
+    align-items: center;
+    justify-content: center;
+    padding: 40px;
+    opacity: 0;
+    transition: opacity 0.3s;
+  }
+
+  .modal-overlay.active {
+    display: flex;
+    opacity: 1;
+  }
+
+  .modal {
+    background: var(--white);
+    border-radius: 24px;
+    max-width: 800px;
+    width: 100%;
+    max-height: 85vh;
+    overflow-y: auto;
+    position: relative;
+    box-shadow: 0 32px 80px rgba(0,0,0,0.3);
+    transform: translateY(20px);
+    transition: transform 0.3s;
+  }
+
+  .modal-overlay.active .modal {
+    transform: translateY(0);
+  }
+
+  .modal-close {
+    position: absolute;
+    top: 16px;
+    right: 16px;
+    width: 40px;
+    height: 40px;
+    background: rgba(26,42,46,0.8);
+    border: none;
+    border-radius: 50%;
+    color: white;
+    font-size: 20px;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    z-index: 10;
+    transition: background 0.2s;
+  }
+
+  .modal-close:hover { background: var(--brand); }
+
+  .modal-image {
+    width: 100%;
+    height: 300px;
+    overflow: hidden;
+    border-radius: 24px 24px 0 0;
+  }
+
+  .modal-image img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+  }
+
+  .modal-body {
+    padding: 40px;
+  }
+
+  .modal-body .product-tag { margin-bottom: 16px; }
+
+  .modal-body h2 {
+    font-size: 32px;
+    font-weight: 800;
+    letter-spacing: -1px;
+    color: var(--text);
+    margin-bottom: 16px;
+  }
+
+  .modal-body .modal-desc {
+    font-size: 16px;
+    color: var(--text-secondary);
+    line-height: 1.8;
+    margin-bottom: 28px;
+  }
+
+  .modal-specs {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 16px;
+    margin-bottom: 32px;
+  }
+
+  .modal-spec {
+    background: var(--bg-section);
+    border-radius: 12px;
+    padding: 16px 20px;
+    border: 1px solid var(--border);
+  }
+
+  .modal-spec-label {
+    font-size: 12px;
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    color: var(--text-light);
+    margin-bottom: 4px;
+  }
+
+  .modal-spec-value {
+    font-size: 16px;
+    font-weight: 700;
+    color: var(--text);
+  }
+
+  .modal-cta {
+    display: flex;
+    gap: 12px;
+    flex-wrap: wrap;
+  }
+
+  .modal-cta .btn-primary { font-size: 14px; padding: 14px 28px; }
+  .modal-cta .btn-outline {
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    background: transparent;
+    color: var(--brand);
+    padding: 14px 28px;
+    border-radius: 12px;
+    font-size: 14px;
+    font-weight: 600;
+    text-decoration: none;
+    border: 2px solid var(--brand);
+    transition: all 0.2s;
+  }
+  .modal-cta .btn-outline:hover {
+    background: var(--brand-soft);
+  }
+
+  @media (max-width: 768px) {
+    .modal-overlay { padding: 16px; }
+    .modal-image { height: 200px; }
+    .modal-body { padding: 24px; }
+    .modal-body h2 { font-size: 24px; }
+    .modal-specs { grid-template-columns: 1fr; }
+  }
+
+  /* ===== RESPONSIVE ===== */
+  @media (max-width: 1024px) {
+    .hero-content { grid-template-columns: 1fr; }
+    .hero-showcase { display: none; }
+    .about-grid { grid-template-columns: 1fr; }
+    .about-image-grid { height: 360px; }
+    .products-grid { grid-template-columns: repeat(2, 1fr); }
+    .gallery-strip { grid-template-columns: repeat(2, 1fr); }
+    .contact-bar-inner { grid-template-columns: repeat(2, 1fr); }
+    .footer-inner { grid-template-columns: 1fr 1fr; }
+  }
+
+  @media (max-width: 768px) {
+    nav { padding: 0 20px; }
+    .nav-links { display: none; }
+    .hero h1 { font-size: 36px; letter-spacing: -1px; }
+    .hero-text { font-size: 16px; }
+    .hero-content { padding: 60px 24px; }
+    .hero-buttons { flex-direction: column; }
+    .trust-inner { flex-direction: column; gap: 20px; }
+    .trust-items { gap: 20px; }
+    .section-wrap { padding: 60px 24px; }
+    .section-title { font-size: 32px; }
+    .about-image-grid { grid-template-columns: 1fr; height: auto; }
+    .about-img.large { grid-row: auto; }
+    .about-img { height: 200px; }
+    .image-banner { height: 280px; }
+    .image-banner-content h2 { font-size: 32px; }
+    .products { padding: 60px 24px; }
+    .products-grid { grid-template-columns: 1fr; }
+    .gallery-strip { grid-template-columns: 1fr 1fr; }
+    .gallery-strip-item { height: 200px; }
+    .cta-section { padding: 60px 24px; }
+    .cta-inner h2 { font-size: 32px; }
+    .cta-buttons { flex-direction: column; align-items: center; }
+    .contact-bar { padding: 40px 24px; }
+    .contact-bar-inner { grid-template-columns: 1fr; gap: 24px; }
+    footer { padding: 40px 24px; }
+    .footer-inner { grid-template-columns: 1fr; gap: 32px; }
+    .footer-bottom { flex-direction: column; gap: 16px; text-align: center; }
+  }
+</style>
+</head>
+<body>
+
+<!-- ===== NAVIGATION ===== -->
+<nav>
+  <a class="nav-logo" href="#">
+    <img src="https://guehring-gmbh.de/wp-content/uploads/2025/12/logo-white.png" alt="Gühring GmbH Spanntechnik">
+  </a>
+  <ul class="nav-links">
+    <li><a href="#home">Home</a></li>
+    <li><a href="#about">Über uns</a></li>
+    <li><a href="#products">Produkte</a></li>
+    <li><a href="#contact">Kontakt</a></li>
+    <li><a href="#contact" class="nav-cta">Anfrage senden</a></li>
+  </ul>
+</nav>
+
+<!-- ===== HERO ===== -->
+<section class="hero" id="home">
+  <div class="hero-bg">
+    <img src="https://images.unsplash.com/photo-1597057435443-8a51eeb5538f?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&q=80&w=1920" alt="Industriehalle">
+  </div>
+  <div class="hero-content">
+    <div>
+      <div class="hero-badge">Seit &uuml;ber 35 Jahren</div>
+      <h1>Magnetische Kraft<br>f&uuml;r <span>Ihre Industrie</span></h1>
+      <p class="hero-text">
+        Zuverl&auml;ssige L&ouml;sungen in der Lasthebetechnik, Spanntechnik und Magnettechnologie.
+        Wir entwickeln, produzieren und vertreiben hochwertige Systeme f&uuml;r Ihren Produktionserfolg.
+      </p>
+      <div class="hero-buttons">
+        <a href="#products" class="btn-primary">Produkte entdecken</a>
+        <a href="#contact" class="btn-secondary">Kontakt aufnehmen</a>
+      </div>
+    </div>
+    <div class="hero-showcase">
+      <div class="hero-product">
+        <img src="https://guehring-gmbh.de/wp-content/uploads/2025/12/guh-4.jpg" alt="Lasthebemagnet MaxX">
+        <div class="hero-product-label">Lasthebemagnet MaxX</div>
+      </div>
+      <div class="hero-product">
+        <img src="https://guehring-gmbh.de/wp-content/uploads/2025/12/guh-1-2.jpg" alt="Magnetspannplatte">
+        <div class="hero-product-label">Magnetspannplatte</div>
+      </div>
+      <div class="hero-product">
+        <img src="https://guehring-gmbh.de/wp-content/uploads/2025/12/guh-3-1.jpg" alt="Parallelpolplatten">
+        <div class="hero-product-label">Parallelpolplatten</div>
+      </div>
+      <div class="hero-product">
+        <img src="https://guehring-gmbh.de/wp-content/uploads/2025/12/guh-2.jpg" alt="Lasthebemagnet MaxX TG">
+        <div class="hero-product-label">MaxX TG</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ===== TRUST BAR ===== -->
+<div class="trust-bar">
+  <div class="trust-inner">
+    <div class="trust-items">
+      <div class="trust-item">
+        <div class="trust-icon">&#x2713;</div>
+        Deutsche Ingenieurskunst
+      </div>
+      <div class="trust-item">
+        <div class="trust-icon">&#x2713;</div>
+        Individuelle Beratung
+      </div>
+      <div class="trust-item">
+        <div class="trust-icon">&#x2713;</div>
+        Zertifizierte Qualit&auml;t
+      </div>
+      <div class="trust-item">
+        <div class="trust-icon">&#x2713;</div>
+        Weltweiter Versand
+      </div>
+      <div class="trust-item">
+        <div class="trust-icon">&#x2713;</div>
+        Made in Germany
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- ===== ABOUT ===== -->
+<div class="section-wrap" id="about">
+  <div class="section-label">&Uuml;ber uns</div>
+  <h2 class="section-title">Kompetenz in<br>Magnettechnologie</h2>
+  <div class="about-grid">
+    <div>
+      <p class="section-subtitle">
+        Die G&uuml;hring GmbH mit Sitz in Kornwestheim steht seit &uuml;ber 35 Jahren f&uuml;r
+        erstklassige L&ouml;sungen in der Lasthebe- und Spanntechnik. Als inhabergef&uuml;hrtes
+        Unternehmen verbinden wir tiefes Fachwissen mit pers&ouml;nlicher Beratung.
+      </p>
+      <div class="about-features">
+        <div class="about-feature">
+          <div class="about-feature-icon">&#x2699;&#xFE0F;</div>
+          <div>
+            <h4>Entwicklung &amp; Produktion</h4>
+            <p>Eigenentwicklung und Fertigung hochwertiger Magnetsysteme f&uuml;r industrielle Anwendungen.</p>
+          </div>
+        </div>
+        <div class="about-feature">
+          <div class="about-feature-icon">&#x1f91d;</div>
+          <div>
+            <h4>Beratung &amp; Service</h4>
+            <p>Individuelle Beratung und umfassender Service f&uuml;r ma&szlig;geschneiderte L&ouml;sungen.</p>
+          </div>
+        </div>
+        <div class="about-feature">
+          <div class="about-feature-icon">&#x1f3ed;</div>
+          <div>
+            <h4>Industriekompetenz</h4>
+            <p>Jahrzehntelange Erfahrung in der Werkzeugmaschinenperipherie und Industrietechnik.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="about-image-grid">
+      <div class="about-img large">
+        <img src="https://images.unsplash.com/photo-1586333109867-812586269a58?crop=entropy&cs=tinysrgb&fit=crop&fm=jpg&q=80&w=600&h=800" alt="Industriearbeiter">
+        <div class="about-img-overlay">35+ Jahre Erfahrung</div>
+      </div>
+      <div class="about-img">
+        <img src="https://images.unsplash.com/photo-1590239481209-b99e795df500?crop=entropy&cs=tinysrgb&fit=crop&fm=jpg&q=80&w=600&h=400" alt="Pr&auml;zisionsfertigung">
+      </div>
+      <div class="about-img">
+        <img src="https://images.unsplash.com/photo-1562568068-7a90cf9e499d?crop=entropy&cs=tinysrgb&fit=crop&fm=jpg&q=80&w=600&h=400" alt="Metallfertigung">
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- ===== IMAGE BANNER ===== -->
+<div class="image-banner">
+  <img src="https://images.unsplash.com/photo-1550980217-9451a338c2b6?crop=entropy&cs=tinysrgb&fit=crop&fm=jpg&q=80&w=1920&h=500" alt="Pr&auml;zisionsarbeit">
+  <div class="image-banner-content">
+    <div>
+      <h2>Pr&auml;zision trifft <span>Magnetkraft</span></h2>
+      <p>H&ouml;chste Qualit&auml;tsstandards f&uuml;r maximale Sicherheit und Effizienz in Ihrer Produktion.</p>
+    </div>
+  </div>
+</div>
+
+<!-- ===== PRODUCTS ===== -->
+<div class="products" id="products">
+  <div class="products-inner">
+    <div class="products-header">
+      <div class="section-label">Produktprogramm</div>
+      <h2 class="section-title">Unsere L&ouml;sungen</h2>
+      <p class="section-subtitle">Hochwertige Magnettechnik und Spanntechnik f&uuml;r anspruchsvolle industrielle Anwendungen.</p>
+    </div>
+    <div class="products-grid">
+      <div class="product-card">
+        <div class="product-card-image">
+          <img src="https://guehring-gmbh.de/wp-content/uploads/2025/12/guh-4.jpg" alt="Lasthebemagnet MaxX">
+        </div>
+        <div class="product-card-body">
+          <div class="product-tag">Bestseller</div>
+          <h3>Lasthebemagnet MaxX</h3>
+          <p>Leistungsstarker Lasthebemagnet f&uuml;r den sicheren Transport schwerer Lasten bis 250 kg und mehr.</p>
+          <a href="#" class="product-link" onclick="openModal('modal-maxx'); return false;">Mehr erfahren</a>
+        </div>
+      </div>
+      <div class="product-card">
+        <div class="product-card-image">
+          <img src="https://guehring-gmbh.de/wp-content/uploads/2025/12/guh-2.jpg" alt="Lasthebemagnet MaxX TG">
+        </div>
+        <div class="product-card-body">
+          <div class="product-tag">Neu</div>
+          <h3>Lasthebemagnet MaxX TG</h3>
+          <p>Die TG-Variante f&uuml;r besonders anspruchsvolle Hebeanwendungen mit erh&ouml;hter Tragkraft.</p>
+          <a href="#" class="product-link" onclick="openModal('modal-maxxtg'); return false;">Mehr erfahren</a>
+        </div>
+      </div>
+      <div class="product-card">
+        <div class="product-card-image">
+          <img src="https://guehring-gmbh.de/wp-content/uploads/2025/12/guh-1-2.jpg" alt="Magnetspannplatte">
+        </div>
+        <div class="product-card-body">
+          <div class="product-tag">Spanntechnik</div>
+          <h3>Magnetspannplatten</h3>
+          <p>Pr&auml;zise Magnetspannplatten f&uuml;r die sichere Werkst&uuml;ckfixierung beim Fr&auml;sen, Schleifen und Erodieren.</p>
+          <a href="#" class="product-link" onclick="openModal('modal-spannplatte'); return false;">Mehr erfahren</a>
+        </div>
+      </div>
+      <div class="product-card">
+        <div class="product-card-image">
+          <img src="https://guehring-gmbh.de/wp-content/uploads/2025/12/guh-3-1.jpg" alt="Parallelpolplatten">
+        </div>
+        <div class="product-card-body">
+          <div class="product-tag">Schleifen</div>
+          <h3>Parallelpolplatten</h3>
+          <p>Parallelpolplatten zum Schleifen &ndash; optimale Spannkraft f&uuml;r Flach- und Profilschleifmaschinen.</p>
+          <a href="#" class="product-link" onclick="openModal('modal-parallel'); return false;">Mehr erfahren</a>
+        </div>
+      </div>
+      <div class="product-card">
+        <div class="product-card-image">
+          <img src="https://images.unsplash.com/photo-1590239683804-b9f5725fe77c?crop=entropy&cs=tinysrgb&fit=crop&fm=jpg&q=80&w=600&h=400" alt="Maschinenschraubst&ouml;cke">
+        </div>
+        <div class="product-card-body">
+          <div class="product-tag">Spanntechnik</div>
+          <h3>Maschinenschraubst&ouml;cke</h3>
+          <p>Robuste und hochpr&auml;zise Maschinenschraubst&ouml;cke f&uuml;r maximale Spannkraft und Wiederholgenauigkeit.</p>
+          <a href="#" class="product-link" onclick="openModal('modal-schraubstock'); return false;">Mehr erfahren</a>
+        </div>
+      </div>
+      <div class="product-card">
+        <div class="product-card-image">
+          <img src="https://images.unsplash.com/photo-1601119462238-d7f347e41844?crop=entropy&cs=tinysrgb&fit=crop&fm=jpg&q=80&w=600&h=400" alt="Anschlagmittel">
+        </div>
+        <div class="product-card-body">
+          <div class="product-tag">Hebetechnik</div>
+          <h3>Anschlagmittel</h3>
+          <p>Gepr&uuml;fte und zertifizierte Anschlagmittel f&uuml;r den professionellen Einsatz im Hebe- und Transportbereich.</p>
+          <a href="#" class="product-link" onclick="openModal('modal-anschlag'); return false;">Mehr erfahren</a>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- ===== GALLERY STRIP ===== -->
+<div class="gallery-strip">
+  <div class="gallery-strip-item">
+    <img src="https://images.unsplash.com/photo-1583737097428-af53774819a2?crop=entropy&cs=tinysrgb&fit=crop&fm=jpg&q=80&w=600&h=400" alt="Stahlproduktion">
+  </div>
+  <div class="gallery-strip-item">
+    <img src="https://images.unsplash.com/photo-1562003094-37c71004fa9b?crop=entropy&cs=tinysrgb&fit=crop&fm=jpg&q=80&w=600&h=400" alt="Industrieanlage">
+  </div>
+  <div class="gallery-strip-item">
+    <img src="https://images.unsplash.com/photo-1619070284836-e850273d69ac?crop=entropy&cs=tinysrgb&fit=crop&fm=jpg&q=80&w=600&h=400" alt="Logistik">
+  </div>
+  <div class="gallery-strip-item">
+    <img src="https://images.unsplash.com/photo-1584549239925-5554aa6b9183?crop=entropy&cs=tinysrgb&fit=crop&fm=jpg&q=80&w=600&h=400" alt="Fertigung">
+  </div>
+</div>
+
+<!-- ===== CTA ===== -->
+<div class="cta-section">
+  <div class="cta-bg">
+    <img src="https://images.unsplash.com/photo-1631856956423-2b95dae0ba74?crop=entropy&cs=tinysrgb&fit=crop&fm=jpg&q=80&w=1920&h=600" alt="Industriehintergrund">
+  </div>
+  <div class="cta-inner">
+    <h2>Bereit f&uuml;r magnetische<br>L&ouml;sungen?</h2>
+    <p>
+      Lassen Sie sich von unserem Expertenteam beraten.
+      Wir finden die optimale L&ouml;sung f&uuml;r Ihre Anforderungen.
+    </p>
+    <div class="cta-buttons">
+      <a href="mailto:info@guehring-gmbh.de" class="btn-primary">Jetzt Beratung anfragen</a>
+      <a href="tel:+4971548160400" class="btn-secondary">+49 (0) 7154-816 04-0</a>
+    </div>
+  </div>
+</div>
+
+<!-- ===== CONTACT BAR ===== -->
+<div class="contact-bar" id="contact">
+  <div class="contact-bar-inner">
+    <div class="contact-item">
+      <div class="contact-icon">&#x1f4cd;</div>
+      <div>
+        <h4>Adresse</h4>
+        <p>Albert-Einstein-Stra&szlig;e 2<br>D-70806 Kornwestheim</p>
+      </div>
+    </div>
+    <div class="contact-item">
+      <div class="contact-icon">&#x1f4de;</div>
+      <div>
+        <h4>Telefon</h4>
+        <p>+49 (0) 7154-816 04-0<br>Fax: +49 (0) 7154-816 04-40</p>
+      </div>
+    </div>
+    <div class="contact-item">
+      <div class="contact-icon">&#x2709;&#xFE0F;</div>
+      <div>
+        <h4>E-Mail</h4>
+        <p>info@guehring-gmbh.de</p>
+      </div>
+    </div>
+    <div class="contact-item">
+      <div class="contact-icon">&#x1f550;</div>
+      <div>
+        <h4>Gesch&auml;ftsf&uuml;hrung</h4>
+        <p>Boas G&uuml;hring<br>HRB 201505 &middot; AG Stuttgart</p>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- ===== FOOTER ===== -->
+<footer>
+  <div class="footer-inner">
+    <div class="footer-brand">
+      <div class="footer-logo">
+        <img src="https://guehring-gmbh.de/wp-content/uploads/2025/12/logo-white.png" alt="G&uuml;hring GmbH">
+      </div>
+      <p>Zuverl&auml;ssige L&ouml;sungen f&uuml;r Lasthebemagnete, Spanntechnik und Industrietechnologie seit &uuml;ber 35 Jahren.</p>
+    </div>
+    <div class="footer-col">
+      <h4>Produkte</h4>
+      <ul>
+        <li><a href="#">Lasthebemagnete</a></li>
+        <li><a href="#">Magnetspannplatten</a></li>
+        <li><a href="#">Parallelpolplatten</a></li>
+        <li><a href="#">Spannsysteme</a></li>
+        <li><a href="#">Magnetheber</a></li>
+      </ul>
+    </div>
+    <div class="footer-col">
+      <h4>Unternehmen</h4>
+      <ul>
+        <li><a href="#about">&Uuml;ber uns</a></li>
+        <li><a href="#">Karriere</a></li>
+        <li><a href="#contact">Kontakt</a></li>
+      </ul>
+    </div>
+    <div class="footer-col">
+      <h4>Rechtliches</h4>
+      <ul>
+        <li><a href="#">Impressum</a></li>
+        <li><a href="#">Datenschutz</a></li>
+        <li><a href="#">AGB</a></li>
+      </ul>
+    </div>
+  </div>
+  <div class="footer-bottom">
+    <p>&copy; 2026 G&uuml;hring GmbH Spanntechnik. Alle Rechte vorbehalten.</p>
+    <div class="footer-social">
+      <a href="#">f</a>
+      <a href="#">in</a>
+      <a href="#">X</a>
+    </div>
+  </div>
+</footer>
+
+<!-- ===== PRODUCT MODALS ===== -->
+
+<!-- Lasthebemagnet MaxX -->
+<div class="modal-overlay" id="modal-maxx" onclick="if(event.target===this)closeModal(this.id)">
+  <div class="modal">
+    <button class="modal-close" onclick="closeModal('modal-maxx')">&times;</button>
+    <div class="modal-image">
+      <img src="https://guehring-gmbh.de/wp-content/uploads/2025/12/guh-4.jpg" alt="Lasthebemagnet MaxX">
+    </div>
+    <div class="modal-body">
+      <div class="product-tag">Bestseller</div>
+      <h2>Lasthebemagnet MaxX</h2>
+      <p class="modal-desc">
+        Der Lasthebemagnet MaxX ist unser meistverkauftes Produkt und bew&auml;hrt sich seit Jahrzehnten im t&auml;glichen Einsatz.
+        Mit seiner kompakten Bauweise und der enormen Haftkraft eignet er sich ideal f&uuml;r den Transport von Blechen, Rundmaterial
+        und anderen ferromagnetischen Werkst&uuml;cken. Die Bedienung erfolgt einfach und sicher &uuml;ber einen Handhebel &ndash;
+        ohne externe Energieversorgung.
+      </p>
+      <div class="modal-specs">
+        <div class="modal-spec">
+          <div class="modal-spec-label">Tragkraft</div>
+          <div class="modal-spec-value">bis 250 kg</div>
+        </div>
+        <div class="modal-spec">
+          <div class="modal-spec-label">Bauart</div>
+          <div class="modal-spec-value">Permanentmagnet</div>
+        </div>
+        <div class="modal-spec">
+          <div class="modal-spec-label">Bedienung</div>
+          <div class="modal-spec-value">Handhebel</div>
+        </div>
+        <div class="modal-spec">
+          <div class="modal-spec-label">Einsatzbereich</div>
+          <div class="modal-spec-value">Flach- &amp; Rundmaterial</div>
+        </div>
+      </div>
+      <div class="modal-cta">
+        <a href="mailto:info@guehring-gmbh.de?subject=Anfrage%20Lasthebemagnet%20MaxX" class="btn-primary">Angebot anfragen</a>
+        <a href="tel:+4971548160400" class="btn-outline">Telefonisch beraten lassen</a>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- Lasthebemagnet MaxX TG -->
+<div class="modal-overlay" id="modal-maxxtg" onclick="if(event.target===this)closeModal(this.id)">
+  <div class="modal">
+    <button class="modal-close" onclick="closeModal('modal-maxxtg')">&times;</button>
+    <div class="modal-image">
+      <img src="https://guehring-gmbh.de/wp-content/uploads/2025/12/guh-2.jpg" alt="Lasthebemagnet MaxX TG">
+    </div>
+    <div class="modal-body">
+      <div class="product-tag">Neu</div>
+      <h2>Lasthebemagnet MaxX TG</h2>
+      <p class="modal-desc">
+        Der MaxX TG erweitert die bew&auml;hrte MaxX-Serie um eine Variante f&uuml;r besonders schwere Lasten.
+        Die TG-Ausf&uuml;hrung bietet erh&ouml;hte Tragkraft bei gleichbleibend kompakter Bauform und ist speziell
+        f&uuml;r den Einsatz in Produktionsumgebungen mit hohen Anforderungen an Sicherheit und Effizienz konzipiert.
+        Robuste Verarbeitung und langlebige Permanentmagnete garantieren zuverl&auml;ssigen Dauerbetrieb.
+      </p>
+      <div class="modal-specs">
+        <div class="modal-spec">
+          <div class="modal-spec-label">Tragkraft</div>
+          <div class="modal-spec-value">bis 500 kg</div>
+        </div>
+        <div class="modal-spec">
+          <div class="modal-spec-label">Bauart</div>
+          <div class="modal-spec-value">Permanentmagnet</div>
+        </div>
+        <div class="modal-spec">
+          <div class="modal-spec-label">Sicherheitsfaktor</div>
+          <div class="modal-spec-value">3:1</div>
+        </div>
+        <div class="modal-spec">
+          <div class="modal-spec-label">Einsatzbereich</div>
+          <div class="modal-spec-value">Schwerlast-Transport</div>
+        </div>
+      </div>
+      <div class="modal-cta">
+        <a href="mailto:info@guehring-gmbh.de?subject=Anfrage%20Lasthebemagnet%20MaxX%20TG" class="btn-primary">Angebot anfragen</a>
+        <a href="tel:+4971548160400" class="btn-outline">Telefonisch beraten lassen</a>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- Magnetspannplatten -->
+<div class="modal-overlay" id="modal-spannplatte" onclick="if(event.target===this)closeModal(this.id)">
+  <div class="modal">
+    <button class="modal-close" onclick="closeModal('modal-spannplatte')">&times;</button>
+    <div class="modal-image">
+      <img src="https://guehring-gmbh.de/wp-content/uploads/2025/12/guh-1-2.jpg" alt="Magnetspannplatte">
+    </div>
+    <div class="modal-body">
+      <div class="product-tag">Spanntechnik</div>
+      <h2>Magnetspannplatten</h2>
+      <p class="modal-desc">
+        Unsere Magnetspannplatten erm&ouml;glichen eine fl&auml;chendeckende, gleichm&auml;&szlig;ige Werkst&uuml;ckspannung ohne
+        mechanische Spannmittel. Das Ergebnis: verzugsfreies Bearbeiten und deutlich verk&uuml;rzte R&uuml;stzeiten.
+        Die Platten eignen sich hervorragend f&uuml;r Fr&auml;s-, Schleif- und Erodierarbeiten und sind in verschiedenen
+        Gr&ouml;&szlig;en und Polausf&uuml;hrungen verf&uuml;gbar.
+      </p>
+      <div class="modal-specs">
+        <div class="modal-spec">
+          <div class="modal-spec-label">Spannfl&auml;che</div>
+          <div class="modal-spec-value">individuell konfigurierbar</div>
+        </div>
+        <div class="modal-spec">
+          <div class="modal-spec-label">Polausf&uuml;hrung</div>
+          <div class="modal-spec-value">Quadratpol / Radialpol</div>
+        </div>
+        <div class="modal-spec">
+          <div class="modal-spec-label">Anwendung</div>
+          <div class="modal-spec-value">Fr&auml;sen, Schleifen, Erodieren</div>
+        </div>
+        <div class="modal-spec">
+          <div class="modal-spec-label">Aktivierung</div>
+          <div class="modal-spec-value">Elektropermanent</div>
+        </div>
+      </div>
+      <div class="modal-cta">
+        <a href="mailto:info@guehring-gmbh.de?subject=Anfrage%20Magnetspannplatten" class="btn-primary">Angebot anfragen</a>
+        <a href="tel:+4971548160400" class="btn-outline">Telefonisch beraten lassen</a>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- Parallelpolplatten -->
+<div class="modal-overlay" id="modal-parallel" onclick="if(event.target===this)closeModal(this.id)">
+  <div class="modal">
+    <button class="modal-close" onclick="closeModal('modal-parallel')">&times;</button>
+    <div class="modal-image">
+      <img src="https://guehring-gmbh.de/wp-content/uploads/2025/12/guh-3-1.jpg" alt="Parallelpolplatten">
+    </div>
+    <div class="modal-body">
+      <div class="product-tag">Schleifen</div>
+      <h2>Parallelpolplatten zum Schleifen</h2>
+      <p class="modal-desc">
+        Parallelpolplatten sind speziell f&uuml;r den Einsatz auf Flach- und Profilschleifmaschinen konstruiert.
+        Durch die parallele Polanordnung wird eine besonders gleichm&auml;&szlig;ige Haftkraftverteilung erzielt,
+        die sich optimal f&uuml;r d&uuml;nne und flache Werkst&uuml;cke eignet. Die Platten erm&ouml;glichen
+        h&ouml;chste Oberfl&auml;cheng&uuml;ten bei minimaler Werkst&uuml;ckverformung.
+      </p>
+      <div class="modal-specs">
+        <div class="modal-spec">
+          <div class="modal-spec-label">Polausf&uuml;hrung</div>
+          <div class="modal-spec-value">Parallelpol fein</div>
+        </div>
+        <div class="modal-spec">
+          <div class="modal-spec-label">Bauart</div>
+          <div class="modal-spec-value">Permanent / Elektropermanent</div>
+        </div>
+        <div class="modal-spec">
+          <div class="modal-spec-label">Anwendung</div>
+          <div class="modal-spec-value">Flach- &amp; Profilschleifen</div>
+        </div>
+        <div class="modal-spec">
+          <div class="modal-spec-label">Vorteil</div>
+          <div class="modal-spec-value">Minimale Verformung</div>
+        </div>
+      </div>
+      <div class="modal-cta">
+        <a href="mailto:info@guehring-gmbh.de?subject=Anfrage%20Parallelpolplatten" class="btn-primary">Angebot anfragen</a>
+        <a href="tel:+4971548160400" class="btn-outline">Telefonisch beraten lassen</a>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- Maschinenschraubst&ouml;cke -->
+<div class="modal-overlay" id="modal-schraubstock" onclick="if(event.target===this)closeModal(this.id)">
+  <div class="modal">
+    <button class="modal-close" onclick="closeModal('modal-schraubstock')">&times;</button>
+    <div class="modal-image">
+      <img src="https://images.unsplash.com/photo-1590239683804-b9f5725fe77c?crop=entropy&cs=tinysrgb&fit=crop&fm=jpg&q=80&w=800&h=400" alt="Maschinenschraubstock">
+    </div>
+    <div class="modal-body">
+      <div class="product-tag">Spanntechnik</div>
+      <h2>Maschinenschraubst&ouml;cke</h2>
+      <p class="modal-desc">
+        Unsere Maschinenschraubst&ouml;cke &uuml;berzeugen durch h&ouml;chste Pr&auml;zision und enorme Spannkr&auml;fte.
+        Sie eignen sich f&uuml;r den Einsatz auf CNC-Fr&auml;smaschinen, Bearbeitungszentren und konventionellen
+        Werkzeugmaschinen. Dank geh&auml;rteter und geschliffener Funktionsfl&auml;chen wird eine ausgezeichnete
+        Wiederholgenauigkeit bei jedem Spannvorgang gew&auml;hrleistet.
+      </p>
+      <div class="modal-specs">
+        <div class="modal-spec">
+          <div class="modal-spec-label">Spannkraft</div>
+          <div class="modal-spec-value">bis 40 kN</div>
+        </div>
+        <div class="modal-spec">
+          <div class="modal-spec-label">Genauigkeit</div>
+          <div class="modal-spec-value">&lt; 0,01 mm</div>
+        </div>
+        <div class="modal-spec">
+          <div class="modal-spec-label">Anwendung</div>
+          <div class="modal-spec-value">CNC-Fr&auml;sen, Bearbeitungszentren</div>
+        </div>
+        <div class="modal-spec">
+          <div class="modal-spec-label">Material</div>
+          <div class="modal-spec-value">Geh&auml;rteter Stahl</div>
+        </div>
+      </div>
+      <div class="modal-cta">
+        <a href="mailto:info@guehring-gmbh.de?subject=Anfrage%20Maschinenschraubstoecke" class="btn-primary">Angebot anfragen</a>
+        <a href="tel:+4971548160400" class="btn-outline">Telefonisch beraten lassen</a>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- Anschlagmittel -->
+<div class="modal-overlay" id="modal-anschlag" onclick="if(event.target===this)closeModal(this.id)">
+  <div class="modal">
+    <button class="modal-close" onclick="closeModal('modal-anschlag')">&times;</button>
+    <div class="modal-image">
+      <img src="https://images.unsplash.com/photo-1601119462238-d7f347e41844?crop=entropy&cs=tinysrgb&fit=crop&fm=jpg&q=80&w=800&h=400" alt="Anschlagmittel">
+    </div>
+    <div class="modal-body">
+      <div class="product-tag">Hebetechnik</div>
+      <h2>Anschlagmittel</h2>
+      <p class="modal-desc">
+        Unser Sortiment an Anschlagmitteln umfasst Ketten, Seile, Hebebänder und Sonderlösungen
+        f&uuml;r den professionellen Hebe- und Transportbetrieb. Alle Produkte sind nach den g&uuml;ltigen
+        Normen gepr&uuml;ft und zertifiziert. Wir beraten Sie gerne bei der Auswahl der richtigen
+        Anschlagmittel f&uuml;r Ihre spezifischen Anforderungen.
+      </p>
+      <div class="modal-specs">
+        <div class="modal-spec">
+          <div class="modal-spec-label">Produktgruppen</div>
+          <div class="modal-spec-value">Ketten, Seile, B&auml;nder</div>
+        </div>
+        <div class="modal-spec">
+          <div class="modal-spec-label">Zertifizierung</div>
+          <div class="modal-spec-value">DIN / EN gepr&uuml;ft</div>
+        </div>
+        <div class="modal-spec">
+          <div class="modal-spec-label">Tragf&auml;higkeit</div>
+          <div class="modal-spec-value">nach Bedarf</div>
+        </div>
+        <div class="modal-spec">
+          <div class="modal-spec-label">Service</div>
+          <div class="modal-spec-value">Pr&uuml;fung &amp; Wartung</div>
+        </div>
+      </div>
+      <div class="modal-cta">
+        <a href="mailto:info@guehring-gmbh.de?subject=Anfrage%20Anschlagmittel" class="btn-primary">Angebot anfragen</a>
+        <a href="tel:+4971548160400" class="btn-outline">Telefonisch beraten lassen</a>
+      </div>
+    </div>
+  </div>
+</div>
+
+<script>
+  function openModal(id) {
+    document.getElementById(id).classList.add('active');
+    document.body.style.overflow = 'hidden';
+  }
+  function closeModal(id) {
+    document.getElementById(id).classList.remove('active');
+    document.body.style.overflow = '';
+  }
+  document.addEventListener('keydown', function(e) {
+    if (e.key === 'Escape') {
+      document.querySelectorAll('.modal-overlay.active').forEach(function(m) {
+        m.classList.remove('active');
+      });
+      document.body.style.overflow = '';
+    }
+  });
+</script>
+
+</body>
+</html>
