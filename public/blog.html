@@ -4,7 +4,23 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Blog – Gühring GmbH Spanntechnik</title>
 <style>
-  @import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&display=swap');
+  /* Inter font - self-hosted for DSGVO compliance */
+  @font-face {
+    font-family: 'Inter';
+    font-style: normal;
+    font-weight: 300 900;
+    font-display: swap;
+    src: url('/fonts/inter-latin-ext.woff2') format('woff2');
+    unicode-range: U+0100-02BA, U+02BD-02C5, U+02C7-02CC, U+02CE-02D7, U+02DD-02FF, U+0304, U+0308, U+0329, U+1D00-1DBF, U+1E00-1E9F, U+1EF2-1EFF, U+2020, U+20A0-20AB, U+20AD-20C0, U+2113, U+2C60-2C7F, U+A720-A7FF;
+  }
+  @font-face {
+    font-family: 'Inter';
+    font-style: normal;
+    font-weight: 300 900;
+    font-display: swap;
+    src: url('/fonts/inter-latin.woff2') format('woff2');
+    unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+0304, U+0308, U+0329, U+2000-206F, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;
+  }
 
   * { margin: 0; padding: 0; box-sizing: border-box; }
 
@@ -12,17 +28,17 @@
     --brand: #00a088;
     --brand-dark: #008a75;
     --brand-darker: #006e5d;
-    --brand-light: #00b89a;
+    --brand-light: #00997f;
     --brand-soft: rgba(0, 160, 136, 0.08);
     --brand-soft2: rgba(0, 160, 136, 0.15);
-    --primary: #1a2a2e;
-    --primary-light: #243a3f;
+    --primary: #ffffff;
+    --primary-light: #f5f7f7;
     --text: #1a1a2e;
     --text-secondary: #5a6478;
     --text-light: #8892a4;
     --bg: #ffffff;
-    --bg-warm: #f8faf9;
-    --bg-section: #f2f6f5;
+    --bg-warm: #f9fafa;
+    --bg-section: #f5f7f7;
     --border: #e0e8e6;
     --white: #ffffff;
   }
@@ -42,19 +58,21 @@
     position: fixed;
     top: 0; left: 0; right: 0;
     z-index: 100;
-    background: rgba(26, 42, 46, 0.97);
+    background: rgba(255, 255, 255, 0.97);
     backdrop-filter: blur(20px);
     padding: 0 48px;
     height: 76px;
     display: flex;
     align-items: center;
     justify-content: space-between;
-    border-bottom: 1px solid rgba(0, 160, 136, 0.15);
+    border-bottom: 1px solid var(--border);
+    box-shadow: 0 1px 8px rgba(0,0,0,0.06);
   }
 
   .nav-logo img {
     height: 38px;
     width: auto;
+    filter: invert(1);
   }
 
   .nav-links {
@@ -65,7 +83,7 @@
   }
 
   .nav-links a {
-    color: rgba(255,255,255,0.7);
+    color: var(--text-secondary);
     text-decoration: none;
     font-size: 14px;
     font-weight: 500;
@@ -74,7 +92,7 @@
     transition: color 0.2s;
   }
 
-  .nav-links a:hover { color: var(--brand-light); }
+  .nav-links a:hover { color: var(--brand); }
 
   .nav-cta {
     background: var(--brand) !important;
@@ -95,7 +113,7 @@
   /* ===== PAGE HEADER ===== */
   .page-header {
     padding: 140px 60px 60px;
-    background: var(--primary);
+    background: var(--bg-section);
     position: relative;
     overflow: hidden;
   }
@@ -115,7 +133,7 @@
 
   .page-header .section-label {
     display: inline-flex; align-items: center; gap: 10px;
-    color: var(--brand-light);
+    color: var(--brand);
     font-size: 13px; font-weight: 700;
     letter-spacing: 2px; text-transform: uppercase;
     margin-bottom: 16px;
@@ -124,14 +142,14 @@
   .page-header .section-label::before {
     content: '';
     width: 28px; height: 2px;
-    background: var(--brand-light);
+    background: var(--brand);
     border-radius: 1px;
   }
 
   .page-header h1 {
     font-size: 48px;
     font-weight: 800;
-    color: var(--white);
+    color: var(--text);
     letter-spacing: -1.5px;
     line-height: 1.15;
     margin-bottom: 16px;
@@ -139,7 +157,7 @@
 
   .page-header p {
     font-size: 18px;
-    color: rgba(255,255,255,0.6);
+    color: var(--text-secondary);
     max-width: 600px;
     line-height: 1.7;
   }
@@ -231,7 +249,7 @@
     position: fixed;
     inset: 0;
     z-index: 1000;
-    background: rgba(26,42,46,0.7);
+    background: rgba(0,0,0,0.3);
     backdrop-filter: blur(6px);
     align-items: center;
     justify-content: center;
@@ -268,7 +286,7 @@
     right: 16px;
     width: 40px;
     height: 40px;
-    background: rgba(26,42,46,0.8);
+    background: rgba(0,0,0,0.5);
     border: none;
     border-radius: 50%;
     color: white;
@@ -334,9 +352,10 @@
 
   /* ===== FOOTER ===== */
   footer {
-    background: var(--primary);
-    color: white;
+    background: var(--bg-section);
+    color: var(--text);
     padding: 60px;
+    border-top: 1px solid var(--border);
   }
 
   .footer-inner {
@@ -344,10 +363,10 @@
     display: grid; grid-template-columns: 2fr 1fr 1fr 1fr; gap: 60px;
   }
 
-  .footer-logo img { height: 32px; margin-bottom: 16px; }
+  .footer-logo img { height: 32px; margin-bottom: 16px; filter: invert(1); }
 
   .footer-brand p {
-    color: rgba(255,255,255,0.5);
+    color: var(--text-secondary);
     font-size: 14px; line-height: 1.7;
     max-width: 300px;
   }
@@ -361,32 +380,32 @@
   .footer-col ul { list-style: none; display: flex; flex-direction: column; gap: 12px; }
 
   .footer-col a {
-    color: rgba(255,255,255,0.6);
+    color: var(--text-secondary);
     text-decoration: none; font-size: 14px;
     transition: color 0.2s;
   }
-  .footer-col a:hover { color: var(--brand-light); }
+  .footer-col a:hover { color: var(--brand); }
 
   .footer-bottom {
     max-width: 1300px; margin: 40px auto 0;
     padding-top: 30px;
-    border-top: 1px solid rgba(255,255,255,0.08);
+    border-top: 1px solid var(--border);
     display: flex; justify-content: space-between; align-items: center;
   }
 
-  .footer-bottom p { color: rgba(255,255,255,0.35); font-size: 13px; }
+  .footer-bottom p { color: var(--text-light); font-size: 13px; }
 
   .footer-social { display: flex; gap: 12px; }
 
   .footer-social a {
     width: 36px; height: 36px;
-    background: rgba(0,160,136,0.15);
+    background: var(--brand-soft);
     border-radius: 10px;
     display: flex; align-items: center; justify-content: center;
-    color: var(--brand-light);
+    color: var(--brand);
     text-decoration: none; font-size: 14px;
     transition: all 0.2s;
-    border: 1px solid rgba(0,160,136,0.2);
+    border: 1px solid rgba(0,160,136,0.15);
   }
 
   .footer-social a:hover {
@@ -482,9 +501,8 @@
     <div class="footer-col">
       <h4>Rechtliches</h4>
       <ul>
-        <li><a href="#">Impressum</a></li>
-        <li><a href="#">Datenschutz</a></li>
-        <li><a href="#">AGB</a></li>
+        <li><a href="/impressum.html">Impressum</a></li>
+        <li><a href="/datenschutz.html">Datenschutz</a></li>
       </ul>
     </div>
   </div>
