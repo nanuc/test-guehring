@@ -26,11 +26,13 @@
 
   :root {
     --brand: #00a088;
-    --brand-light: #00b89a;
-    --primary: #1a2a2e;
+    --brand-light: #00997f;
+    --primary: #ffffff;
     --text: #1a1a2e;
     --text-secondary: #5a6478;
+    --text-light: #8892a4;
     --bg: #ffffff;
+    --bg-section: #f5f7f7;
     --border: #e0e8e6;
   }
 
@@ -43,25 +45,27 @@
   }
 
   nav {
-    background: rgba(26, 42, 46, 0.97);
+    background: rgba(255, 255, 255, 0.97);
+    backdrop-filter: blur(20px);
     padding: 0 48px;
     height: 76px;
     display: flex;
     align-items: center;
     justify-content: space-between;
-    border-bottom: 1px solid rgba(0, 160, 136, 0.15);
+    border-bottom: 1px solid var(--border);
+    box-shadow: 0 1px 8px rgba(0,0,0,0.06);
   }
 
-  .nav-logo img { height: 38px; width: auto; }
+  .nav-logo img { height: 38px; width: auto; filter: invert(1); }
 
   .nav-back {
-    color: rgba(255,255,255,0.7);
+    color: var(--text-secondary);
     text-decoration: none;
     font-size: 14px;
     font-weight: 500;
     transition: color 0.2s;
   }
-  .nav-back:hover { color: var(--brand-light); }
+  .nav-back:hover { color: var(--brand); }
 
   .content {
     max-width: 800px;
@@ -95,23 +99,24 @@
   a { color: var(--brand); }
 
   footer {
-    background: var(--primary);
-    color: white;
+    background: var(--bg-section);
+    color: var(--text);
     padding: 30px 48px;
     text-align: center;
+    border-top: 1px solid var(--border);
   }
 
   footer p {
-    color: rgba(255,255,255,0.4);
+    color: var(--text-light);
     font-size: 13px;
   }
 
   footer a {
-    color: rgba(255,255,255,0.6);
+    color: var(--text-secondary);
     text-decoration: none;
     margin: 0 12px;
   }
-  footer a:hover { color: var(--brand-light); }
+  footer a:hover { color: var(--brand); }
 
   @media (max-width: 768px) {
     nav { padding: 0 20px; }
@@ -140,7 +145,7 @@
   </p>
 
   <h2>Vertreten durch</h2>
-  <p>Geschäftsführer: Boas Gühring</p>
+  <p>Geschäftsführer: Sebastian Schöps</p>
 
   <h2>Kontakt</h2>
   <p>
@@ -165,7 +170,7 @@
 
   <h2>Verantwortlich für den Inhalt nach § 55 Abs. 2 RStV</h2>
   <p>
-    Boas Gühring<br>
+    Sebastian Schöps<br>
     Albert-Einstein-Straße 2<br>
     D-70806 Kornwestheim
   </p>
